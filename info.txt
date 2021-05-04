@@ -1,0 +1,6 @@
+
+Cambios SEO - clase 13:
+
+- Agregué descripción y keywords a todas las páginas del sitio.
+- Modifiqué los títulos de cada página para que coincidan con el tema que tratan.
+- Reestructure la semántica de las páginas, agregando h1 y modificando los h2 que tenía para que quede mejor organizado el sitio.
