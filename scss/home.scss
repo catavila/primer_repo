@@ -134,10 +134,13 @@
     }
     nav {
             display: grid;
-            grid-template-columns: 20% 20% 20% 20% 20%;
-            justify-content: center;
+            justify-content: space-evenly;
             grid-column: 2 / 7;
             grid-row: 3;
+
+            ul {
+                display: flex;
+            }
             ul, a {
                 color: white;
                 list-style-type: none;
@@ -148,11 +151,29 @@
             }
             li {
                 justify-self: center;
+                margin: 1em;
+                margin-top: 1%;
             }
             .rosat {
                 color: #de9696;
             }
         
     }
+    @include media ("<=1100px") {
+        nav {
+            ul, a {
+                color: #de9696;;
+                list-style-type: none;
+                text-decoration: none;
+                font-size: 30px;
+                margin: 0%;
+                padding: 0%;
+            }
+        }
+        #conejo {
+            height: 20%;
+        }
+    }
+    
     
 }
