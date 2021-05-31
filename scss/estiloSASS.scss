@@ -1,3 +1,9 @@
+
+@import 'breakpoints.scss';
+@import 'home.scss';
+@import 'tamanioGaleria.scss';
+
+
 $coloresTexto: black;
 $rosa: #de9696;
 $colorFondo: #f7f4f4;
@@ -18,6 +24,7 @@ body {
     width: 100%;
 }
 .header {
+    width: 100%;
     height: 40%;
     margin-bottom: 30px;
     padding-bottom: 5px;
@@ -63,6 +70,51 @@ body {
         display: inline;
     }
 }
+@include media ("<=900px") {
+    .header {
+        nav {
+            ul, a {
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+@include media ("<=700px") {
+    .header {
+        nav {
+            ul, a {
+                font-size: 1.3em;
+                word-spacing: 0.3em;
+            }
+            button {
+                display: none;
+            }
+        }
+    }
+}
+@include media ("<=570px") {
+    .header {
+        nav {
+            ul, a {
+                font-size: 1.1em;
+                word-spacing: 0.3em;
+            }
+        }
+    }
+}
+@include media ("<=375px") {
+    .header {
+        nav {
+            ul, a {
+                font-size: 1.1em;
+                word-spacing: 0.1em;
+                display: block;
+            }
+
+        }
+    }
+}
+
 @mixin textoh2 {
     color: #9c6061;
     font-size: 30px;
@@ -114,94 +166,109 @@ h1 {
         color: $rosa;
         font-size: $fontSizeTextos;
         padding: 1%;
-        line-height: 5vh;
+        line-height: 1.5em;
         text-align: center;
         letter-spacing: 2px;
         font-weight: lighter;
+        margin: 1em;
+        text-justify: distribute;
     }
 }
-#index {
-    .textosAbajo {
-        &__texto {
-            margin-top: 3%;
+
+
+#galeria {
+    
+    .galeria {
+        display: grid;
+        margin-bottom: 2em;
+        margin-left: 5em;
+        margin-right: 5em;
+        grid-template-rows: 300px 300px 300px 200px;
+        margin-top: 2%;
+        justify-items: center;
+        align-items: center;
+
+        &__zoom:hover {
+            transform: scale(2,2);
+            transition: 3s;
+        }
+        #pesar {
+            grid-column: 1;
+            grid-row: 1;
+            justify-self: left;
+            width: 280px;
+        }
+        #lengua {
+            grid-column: 2 / 4;
+            grid-row: 1;
+            justify-self: end;
+            height: 250px;
+        }
+        #pez {
+            grid-column: 2;
+            grid-row: 1 / 3;
+            justify-self: left;
+            height: 330px;
+        }
+        #cuello {
+            grid-column: 2;
+            grid-row: 2 / 4;
+            justify-self: center;
+            width: 200px;
+        }
+        #vib {
+            grid-column: 2 /4;
+            grid-row: 3 / 5;
+            height: 200px;
+        }
+        #persona {
+            grid-column: 1;
+            grid-row: 3 / 5;
+            width: 300px; 
+        }
+        #cara {
+            width: 300px;
+        }
+        #hueco {
+            width: 250px;
         }
     }
-}
-
-
-.galeria {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 300px 300px 300px 200px;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 2%;
-    justify-items: center;
-    align-items: center;
-
-    &__zoom:hover {
-        transform: scale(2,2);
-        transition: 3s;
-    }
-    #pesar {
-        grid-column: 1;
-        grid-row: 1;
-        justify-self: left;
-        width: 280px;
-    }
-    #lengua {
-        grid-column: 2 / 4;
-        grid-row: 1;
-        justify-self: end;
-        height: 250px;
-    }
-    #pez {
-        grid-column: 2;
-        grid-row: 1 / 3;
-        justify-self: left;
-        height: 330px;
-    }
-    #cuello {
-        grid-column: 2;
-        grid-row: 2 / 4;
-        justify-self: center;
-        width: 200px;
-    }
-    #vib {
-        grid-column: 2 /4;
-        grid-row: 3 / 5;
-        height: 200px;
-    }
-    #persona {
-        grid-column: 1;
-        grid-row: 3 / 5;
-        width: 300px; 
-    }
-    #cara {
-        width: 300px;
-    }
-    #hueco {
-        width: 250px;
+    @include media ("<=375px") {
+        main {    
+            h1 {
+                font-size: 1em;
+                
+            }
+            h2 {
+                font-size: 1em;
+                
+            }
+            h3 {
+                font-size: 0.7em;
+                line-height: 1em;
+                margin: 1em;
+                text-justify: distribute;
+                
+            }
+        }    
     }
 }
-
 #nos {
     h1 {
         @include textoh1();
         margin-right: 5%;
         align-self: center;
-        
     }
 
     @mixin tarjeta ($fondo:tomato){
     background-color: tomato;
-    width: 250px;
-    height: 350px;
     margin: 2rem;
     padding: 10px;
     border-radius: 20px;
 
+        .imagen {
+            display: flex;
+        }  
         img {
             width: 60%;
             margin: 0 auto;
@@ -214,6 +281,10 @@ h1 {
                 transition-duration: 5s;
             }
         }
+        p {
+            font-family: $fontFamily;
+            font-size: 1.2em;
+        }
     }
     main {
         background-color: $colorFondo;
@@ -223,16 +294,64 @@ h1 {
         align-content: center;
         margin-top: 5%;
         margin-bottom: 10%;
-        
-        .tarjeta-1 {
-            @include tarjeta;
+
+        .tarjetas {
+            display: flex;
+            
+            
+            .tarjeta-1 {
+                @include tarjeta;
+                width: 250px;
+            }
+            .tarjeta-2 {
+                @include tarjeta;
+                width: 250px;
+            }
         }
-        .tarjeta-2 {
-            @include tarjeta;
+    }
+
+    @include media ("<=768px") {
+        main {
+            width: 100vw;
+            display: block;
+            h1 {
+                font-size: 1em;
+                margin-right: 2%;
+            }
+            .tarjetas {
+                display: flex;
+                
+                p {
+                    overflow: hidden;
+                    text-align: center;
+                }
+
+            }
+            
+
         }
+         
+    }
+    @include media ("<=375px") {
+        main {    
+            width: 100vw;
+            display: block;
+            h1 {
+                font-size: 1em;
+                margin-right: 2%;
+            }
+            .tarjetas {
+                display: block;
+            }
+            p {
+                font-size: 1em;
+                text-justify: distribute-all-lines;
+            }
+        }    
     }
 }
 #tienda {
+
             @mixin subrayado {
                 margin-left: 15%;
                 margin-right: 15%;
@@ -245,28 +364,91 @@ h1 {
                 border-left: none;
                 border-right: none;
             }
+            @mixin tarjeta ($fondo:tomato){
+                background-color: tomato;
+                margin: 2rem;
+                padding: 10px;
+                border-radius: 20px;
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+
+                img {
+                    width: 80%;
+                    margin: 0 auto;
+                    margin-bottom: 1rem;
+                    justify-self: center;
+                    align-self: center;
+                }
+                a {
+                    text-decoration: none;
+                    font-family: $fontFamily;
+                    font-size: 2.5em;
+                    color: #f7f4f4;
+                    text-align: center;
+                    
+                    @include media ("<=450px") {
+                        font-size: 2em;
+                    }
+                    @include media ("<=450px") {
+                        font-size: 1em;
+                    }
+                
+
+                }
+            }
+        h2 {
+            @include textoh2();
+            font-size: 1.5em;
+        }
         
         h3 {
             @extend h2;
             color: tomato;
-            font-size: 22px;
+            font-size: 1em;
             @include subrayado();
+        }
+        main {
+            h5 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1.5em;
+            }
         }
 
-        #videoTienda {
-            @include subrayado();
-            border-top-style: dotted;
-            border-top-color: tomato;
-            border-bottom: none;
-            padding-top: 5%;
-        }
+        
         #carro {
-            height: 40px;
-            width: 40px;
+            height: 60px;
+            width: 60px;
             position: fixed;
             right: 3%;
             bottom: 2%;
-         }
+        }
+        section {
+            .tarjetas {
+            background-color: $colorFondo;
+            justify-content: center;
+            align-content: center;
+            margin-top: 2%;
+            margin-bottom: 5%;
+                
+                .tarjeta-1 {
+                    @include tarjeta;
+                    display: flex;
+                }
+                .tarjeta-2 {
+                    @include tarjeta;
+                    display: flex;
+
+                }
+                .tarjeta-3 {
+                    @include tarjeta;
+                    display: flex;
+
+                }
+            }
+        }
 }
 #contacto {
     main {
@@ -297,32 +479,85 @@ h1 {
                         transform: rotate(-30deg);
                     }
                 }
+
+                @include media ("<=1180px") {
+                    width: 40%;
+                }
+                @include media ("<=854px") {
+                    width: 45%;
+                }
+                @include media ("<=700px") {
+                    width: 50%;
+                    
+                }
+                @include media ("<=600px") {
+                    height: 20%;
+                }
+
             }
+        }
+        @include media ("<=400px") {
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+            .padreContacto {
+                display: block;
+            }
+            img {
+                justify-self: center;
+                margin-left: 5%;
+                margin-bottom: 5%;
+            }   
+              
+        }
+        
+    }
+}
+footer {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+    justify-content: space-evenly;
+    position: absolute;
+    .mailinsta {
+        text-decoration: none;
+        color: black;
+        font-size: 2em;
+        align-self: center;
+    }
+    .footerImg {
+        height: 30%;
+        align-self: center;
+    }
+}
+@include media ("<=600px") {
+    footer {
+
+        .mailinsta {
+            font-size: 1em;
+        }
+        .footerImg {
+            height: 20%;
+        }
+    }
+}
+@include media ("<=356px") {
+    footer {
+        display: inline-flex;
+        .mailinsta {
+            font-size: 1em;
+            margin: 0.2em;
+        }
+        .footerImg {
+            height: 20%;
+            margin: 0.2em;
+            
         }
     }
 }
 
-.footer {
-    background-color: rgb(227, 190, 196);
-    width: 100vw;
-    ul {
-        padding-left: 15%;
-    }
-    li {
-        display: inline;
-        margin: 2%;
-    }
-    
-    &__item {
-        width: 3%;
-        vertical-align: center;
-        color: $coloresTexto;
-    }
-    &__item--active {
-        @extend .footer__item;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: 5px;
-        font-size: $fontSizeTitulos;
-    }
-}    
