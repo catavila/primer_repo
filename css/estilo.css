@@ -138,6 +138,45 @@
       padding: 0%; }
     #home #conejo {
       height: 20%; } }
+  @media (max-width: 414px) {
+    #home #grid {
+      width: 100vw;
+      height: 80vh;
+      display: grid;
+      grid-template-columns: 25vw 10vw 10vw 10vw 10vw 10vw 25vw;
+      grid-template-rows: 15vh 50vh 15vh; }
+      #home #grid nav ul, #home #grid nav a {
+        color: #de9696;
+        list-style-type: none;
+        text-decoration: none;
+        font-size: 1em;
+        margin: 0%;
+        padding: 0%; }
+      #home #grid #conejo {
+        height: 40%;
+        justify-self: first baseline; }
+      #home #grid #cuadrado {
+        width: 100%;
+        display: grid;
+        align-self: center; }
+      #home #grid #crota {
+        width: 60%; }
+      #home #grid #curi {
+        width: 60%; }
+      #home #grid #curiDos {
+        width: 80%;
+        align-self: center;
+        margin-bottom: 2em; }
+      #home #grid #curiTres {
+        width: 50%;
+        align-self: center; }
+      #home #grid #curiCinco {
+        grid-column: 5;
+        grid-row: 3;
+        width: 90%;
+        justify-self: center; }
+      #home #grid #curiSeis {
+        width: 100%; } }
 
 #galeria main div.galeria {
   max-width: 100vw; }
@@ -314,7 +353,7 @@ body {
     background-color: none;
     transform: rotate(-10deg); }
   50% {
-    background-color: orange;
+    background-color: #de9696;
     transform: rotate(5deg); }
   100% {
     background-color: none;
@@ -371,7 +410,8 @@ h1 {
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 3%;
-  text-align: center; }
+  text-align: center;
+  font-weight: initial; }
 
 .padreUno {
   width: 100%;
@@ -383,7 +423,7 @@ h1 {
   .padreUno__item {
     width: 45%;
     border-style: dotted;
-    border-color: orange;
+    border-color: #de9696;
     padding: 1%; }
 
 .textosAbajo {
@@ -465,6 +505,7 @@ h1 {
   margin-right: 15%;
   margin-top: 3%;
   text-align: center;
+  font-weight: initial;
   margin-right: 5%;
   align-self: center; }
 
@@ -690,7 +731,7 @@ h1 {
     transform: rotate(-30deg); }
   50% {
     transform: rotate(5deg);
-    background-color: orange; }
+    background-color: #de9696; }
   100% {
     transform: rotate(-30deg); } }
     @media (max-width: 1180px) {

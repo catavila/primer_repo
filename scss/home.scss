@@ -174,6 +174,61 @@
             height: 20%;
         }
     }
-    
-    
+    @include media ("<=414px") {
+        
+        #grid {
+            width: 100vw;
+            height: 80vh;
+            display: grid;
+            grid-template-columns: 25vw 10vw 10vw 10vw 10vw 10vw 25vw;
+            grid-template-rows: 15vh 50vh 15vh;
+        
+            nav {
+                ul, a {
+                    color: #de9696;;
+                    list-style-type: none;
+                    text-decoration: none;
+                    font-size: 1em;
+                    margin: 0%;
+                    padding: 0%;
+                    
+                }
+            }
+            #conejo {
+                height: 40%;
+                justify-self: first baseline;
+            }
+            #cuadrado {
+                width: 100%;
+                display: grid;
+                align-self: center;
+            }
+            #crota {
+                width: 60%;
+            }
+            #curi {
+                width: 60%;
+            }
+            #curiDos {
+                width: 80%;
+                align-self: center;
+                margin-bottom: 2em;
+            }
+            #curiTres {
+                width: 50%;
+                align-self: center;
+            }
+            #curiCinco {
+                grid-column: 5;
+                grid-row: 3;
+                width: 90%;
+                justify-self: center;
+                
+            }
+            #curiSeis {
+                width: 100%;
+
+            }
+        }
+    }
 }

@@ -46,7 +46,7 @@ body {
                     transform: rotate(-10deg);
                 }
                 50% {
-                    background-color: orange;
+                    background-color: $rosa;
                     transform: rotate(5deg);
                 }
                 100% {
@@ -136,7 +136,8 @@ h2 {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 3%;
-    text-align: center;  
+    text-align: center;
+    font-weight: initial;  
 }
 h1 {
     @include textoh1();
@@ -154,7 +155,7 @@ h1 {
     &__item {
         width: 45%;
         border-style: dotted;
-        border-color: orange;
+        border-color: $rosa;
         padding: 1%;
     }
 }
@@ -177,6 +178,7 @@ h1 {
 
 
 #galeria {
+    
     
     .galeria {
         display: grid;
@@ -472,7 +474,7 @@ h1 {
                     }
                     50% {
                         transform: rotate(5deg);
-                        background-color: orange;
+                        background-color: $rosa;
                     }
                     100% {
                         transform: rotate(-30deg);
