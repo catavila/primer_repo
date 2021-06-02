@@ -25,7 +25,7 @@ body {
 }
 .header {
     width: 100%;
-    height: 40%;
+    height: auto;
     margin-bottom: 30px;
     padding-bottom: 5px;
     margin-right: 15px;
@@ -107,7 +107,7 @@ body {
         }
     }
 }
-@include media ("<=375px") {
+@include media ("<=414px") {
     .header {
         nav {
             display: flex;
