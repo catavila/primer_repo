@@ -13,7 +13,7 @@
 <body id="tienda">
     <!-- bloque 1 -->
     <header class="header">
-        <div> 
+        <div id="logoBox"> 
             <img src="images/index/crota.png" alt="logo" class="header__logo">
         </div>
         <div> 
@@ -55,21 +55,21 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="images/tienda/1.jpg" class="d-block w-100" alt="foto computadora">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block">
                   <h5>Seleccioná los productos que queres</h5>
                   <p>puede ser 1 o varios</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="images/tienda/2.jpg" class="d-block w-100" alt="foto pago online">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-md-block">
                   <h5>Elegí tu método de pago</h5>
                   <p>Transferencia / efectivo / tarjeta</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="images/tienda/3.jpg" class="d-block w-100" alt="foto paquetes del correo">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption  d-md-block">
                   <h5>Definí tu punto de entrega</h5>
                   <p>Podes retirar o recibir el pedido en tu domicilio</p>
                 </div>
@@ -84,27 +84,35 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-        <div id="videoTienda" align="center">
-            <iframe width="681" height="380" src="https://www.youtube.com/embed/IPNGHBvQwso" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+<!--bloque 4-->          
+        <section>
+            <h2>Productos</h2>
+            <div class="tarjetas">
+                <div class="tarjeta-1">
+                    <div class="imagen"><img src="images/tienda/remeraConLineas.png" alt="foto producto remera"></div>
+                    <a href="https://www.mercadolibre.com.ar">Remeras</a>
+                </div>
+                <div class="tarjeta-2">
+                    <div class="imagen"><img src="images/tienda/sombre1.png" alt="foto producto sombrero"></div>
+                    <a href="https://www.mercadolibre.com.ar">Sombreros</a>
+                </div>
+                <div class="tarjeta-3">
+                    <div class="imagen"><img src="images/tienda/sweaterLineas.png" alt="foto producto buzo"></div>
+                    <a href="https://www.mercadolibre.com.ar">Buzos</a>
+                </div>
+            </div>
+        </section>
         <img src="images/tienda/carro.png" alt="carro de compras" id="carro">
     </main>
-<!-- bloque 4 -->
-    <footer class="footer">
-        <ul>
-            <li>
-                <img src="images/index/instagram1.png" alt="icono instagram" class="footer__item">
-            </li>
-            <li>
-                <a href="https://www.instagram.com" class="footer__item--active">@crota</a>
-            </li>
-            <li>
-                <img src="images/index/email1.png" alt="icono mail" class="footer__item">
-            </li>
-            <li>
-                <a href="mailto: catavila07@gmail.com" class="footer__item--active">mail de contacto</a>
-            </li>
-        </ul>
+<!-- bloque 5 -->
+    <footer>
+        <img src="images/index/instagram1.png" alt="icono instagram" class="footerImg">
+        <a href="https://www.instagram.com" class="mailinsta">@crota</a>
+        <p class="mailinsta">//</p>
+        <img src="images/index/email1.png" alt="icono mail" class="footerImg">
+        <a href="mailto: catavila07@gmail.com" class="mailinsta">mail de contacto</a>
+        <p class="mailinsta">//</p>
+        <p class="mailinsta">gracias x pasar</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>

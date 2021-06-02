@@ -1,7 +1,10 @@
-#index {
+$grid-grande: 100vw;
+
+
+#galeria {
     main {
         div.galeria {
-                max-height: $grid-grande;
+                max-width: $grid-grande;
                 
         }
     }
@@ -11,34 +14,215 @@
     #galeria {
         main {
             div.galeria {
-                    max-height: $grid-grande/2;
-                    justify-content: center;
+
+                #pesar {
+                    grid-column: 1;
+                    grid-row: 1;
+                    justify-self: left;
+                    width: 220px;
+                }
+                #lengua {
+                    grid-column: 2 / 4;
+                    grid-row: 1;
+                    justify-self: end;
+                    height: 200px;
+                }
+                #pez {
+                    grid-column: 2;
+                    grid-row: 1 / 3;
+                    justify-self: left;
+                    height: 200px;
+                }
+                #cuello {
+                    grid-column: 2;
+                    grid-row: 2 / 4;
+                    justify-self: center;
+                    width: 160px;
+                }
+                #vib {
+                    grid-column: 2 /4;
+                    grid-row: 3 / 5;
+                    height: 160px;
+                }
+                #persona {
+                    grid-column: 1;
+                    grid-row: 3 / 5;
+                    width: 200px; 
+                }
+                #cara {
+                    width: 200px;
+                }
+                #hueco {
+                    width: 180px;
+                }
+                    
+                
                 
             }
         }
     }
 }
-@media (max-width: 839px) and (min-width: 515px) {
+@media (max-width: 840px) and (min-width: 620px) {
     #galeria {
         main {
             div.galeria {
+                display: grid;
+                grid-template-rows: auto;
+
+                #pesar {
+                    grid-column: 1;
+                    grid-row: 1;
+                    justify-self: left;
+                    width: 150px;
+                    margin-top: 2em;
+                }
+                #lengua {
+                    grid-column: 2 / 4;
+                    grid-row: 1;
+                    justify-self: end;
+                    height: 125px;
+                }
+                #pez {
+                    grid-column: 2;
+                    grid-row: 1 / 3;
+                    justify-self: left;
+                    height: 165px;
+                }
+                #cuello {
+                    grid-column: 2;
+                    grid-row: 2 / 4;
+                    justify-self: center;
+                    width: 100px;
+                }
+                #vib {
+                    grid-column: 2 /4;
+                    grid-row: 3 / 5;
+                    height: 100px;
+                }
+                #persona {
+                    grid-column: 1;
+                    grid-row: 3 / 5;
+                    width: 150px; 
+                }
+                #cara {
+                    width: 150px;
+                }
+                #hueco {
+                    width: 125px;
+                }
+                    
                 
-                    max-height: $grid-grande/3;
-                    justify-content: center;
                 
             }
         }
     }
 }
-@media (max-width: 514px) and (min-width: 0px) {
+@media (max-width: 620px) and (min-width: 400px) {
     #galeria {
         main {
             div.galeria {
+                display: grid;
+                grid-template-rows: auto;
+
+                #pesar {
+                    grid-column: 1;
+                    grid-row: 1;
+                    justify-self: left;
+                    width: 150px;
+                    margin-top: 2em;
+                }
+                #lengua {
+                    grid-column: 2 / 4;
+                    grid-row: 1;
+                    justify-self: end;
+                    height: 125px;
+                    
+                }
+                #pez {
+                    grid-column: 2;
+                    grid-row: 1 / 3;
+                    justify-self: left;
+                    height: 165px;
+                    margin-right: 1em;
+                    margin-left: 1em;
+                }
+                #cuello {
+                    grid-column: 2;
+                    grid-row: 2 / 4;
+                    justify-self: center;
+                    width: 100px;
+                }
+                #vib {
+                    grid-column: 2 /4;
+                    grid-row: 3 / 5;
+                    height: 100px;
+                }
+                #persona {
+                    grid-column: 1;
+                    grid-row: 3 / 5;
+                    width: 150px; 
+                }
+                #cara {
+                    width: 150px;
+                }
+                #hueco {
+                    width: 125px;
+                }
+                    
                 
-                    display: block;
-                    max-height: $grid-grande/4;
-                    padding-top: 1rem;
                 
+            }
+        }
+    }
+}
+@media (max-width: 450px) and (min-width: 180px) {
+    #galeria {
+        main {
+            div.galeria {
+                display: block;
+
+                #pesar {
+                    margin: 0.5em;
+                    width: 100%;
+                }
+                #lengua {
+                    margin: 0.5em;
+                    width: 100%;
+                    height: 30%;
+                }
+                #pez {
+                    margin: 1em;
+                    width: 50%;
+                    height: auto;
+
+                }
+                #cuello {
+                    margin: 0%;
+                    width: 100%;
+                }
+                #vib {
+                    margin: 0.5em;
+                    height: 20%;
+                    width: 100%;
+                }
+                #persona {
+                    margin: 0.5em;
+                    width: 60%; 
+                    margin-left: 4em;
+                }
+                #cara {
+                    width: 40%;
+                    margin: 0.5em;
+                    margin-bottom: 1.5em;
+                }
+                #hueco {
+                    width: 40%;
+                    margin: 0.5em;
+                    margin-bottom: 1.5em;
+                }
+
+
+
             }
         }
     }
