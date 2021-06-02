@@ -159,7 +159,8 @@
             }
         
     }
-    @include media ("<=1100px") {
+    
+    @include media ("<=900px") {
         nav {
             ul, a {
                 color: #de9696;;
@@ -170,12 +171,70 @@
                 padding: 0%;
             }
         }
-        #conejo {
-            height: 20%;
+        
+    }
+
+    @include media ("<=1100px"){
+        #grid {
+
+            #cuadrado {
+                width: 60%;
+                align-self: center;
+            }
+            #conejo {
+                height: 50%;
+                justify-self: baseline;
+            }
+        }
+        nav {
+             align-self: center;
         }
     }
-    @include media ("<=414px") {
-        
+    @include media ("<=800px"){
+        #grid {
+            #cuadrado {
+                width: 70%;
+                align-self: center;
+            }
+            #conejo {
+                height: 50%;
+                justify-self: baseline;
+            }
+        }
+        nav {
+             align-self: center;
+        }
+    }
+    @include media ("<=600px"){
+        nav {
+            align-self: center;
+            ul, a {
+                font-size: 1.3em;
+            }
+
+        }
+    }
+    @include media ("<=550px"){
+        nav {
+            align-self: center;
+            ul, a {
+                font-size: 1.2em;
+            }
+
+        }
+        #grid {
+            #conejo {
+                height: 40%;
+            }
+            #cuadrado {
+                width: 90%;
+            }
+            #crota {
+                width: 80%;
+            }
+        }
+    }
+    @include media ("<=414px"){
         #grid {
             width: 100vw;
             height: 80vh;
@@ -184,6 +243,7 @@
             grid-template-rows: 15vh 50vh 15vh;
         
             nav {
+                
                 ul, a {
                     color: #de9696;;
                     list-style-type: none;
@@ -191,21 +251,20 @@
                     font-size: 1em;
                     margin: 0%;
                     padding: 0%;
-                    
+                    display: block;
                 }
             }
+            
             #conejo {
-                height: 40%;
+                height: 30%;
                 justify-self: first baseline;
             }
             #cuadrado {
-                width: 100%;
+                width: 110%;
                 display: grid;
                 align-self: center;
             }
-            #crota {
-                width: 60%;
-            }
+            
             #curi {
                 width: 60%;
             }
